@@ -8,6 +8,8 @@ class Assets_Image {
   static String icon_quran =biscImage+"icon_quran.png";
   static String icon_radio =biscImage+"icon_radio.png";
   static String icon_sebha =biscImage+"icon_sebha.png";
+  static String hadeth_logo =biscImage+"hadeth_logo.png";
+  static String quran_logo =biscImage+"quran_logo.png";
 
 
 }

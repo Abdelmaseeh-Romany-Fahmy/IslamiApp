@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami2026/commen/appTheme.dart';
 import 'package:islami2026/widgets/Home.dart';
 import 'package:islami2026/widgets/SplashPage.dart';
 
@@ -13,6 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: Apptheme.lightTheme,
+      darkTheme:Apptheme.darkTheme ,
+      themeMode:ThemeMode.light ,
       debugShowCheckedModeBanner: false,
       initialRoute: SplashPage.routName,
       routes: {
