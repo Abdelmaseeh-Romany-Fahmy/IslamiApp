@@ -3,6 +3,26 @@ import 'package:islami2026/ui/appColors.dart';
 
 class Apptheme {
 static  ThemeData lightTheme =ThemeData(
+  colorScheme: ColorScheme(
+      brightness: Brightness.light,
+      primary: Appcolors.meanLightColor,
+      onPrimary:Appcolors.whiteColor ,
+      secondary: Appcolors.blackLightColor,
+      onSecondary: Appcolors.whiteColor,
+      error: Colors.red,
+      onError: Appcolors.whiteColor,
+      surface: Appcolors.whiteColor,
+      onSurface: Appcolors.whiteColor),
+
+  dividerTheme:DividerThemeData(color: Appcolors.meanLightColor) ,
+
+  textTheme: TextTheme(
+    titleMedium: TextStyle(
+      fontSize: 25,
+      fontWeight: FontWeight.w400,
+      color: Appcolors.blackLightColor
+    )
+  ),
     appBarTheme: AppBarTheme(
       centerTitle: true,
       backgroundColor: Colors.transparent,
@@ -23,7 +43,28 @@ static  ThemeData lightTheme =ThemeData(
     ),
   );
  static ThemeData darkTheme =ThemeData(
-    appBarTheme: AppBarTheme(
+   dividerTheme:DividerThemeData(color: Appcolors.goldLightColor) ,
+
+   colorScheme: ColorScheme(
+       brightness: Brightness.dark,
+       primary: Appcolors.deepBlueLightColor,
+       onPrimary:Appcolors.whiteColor ,
+       secondary: Appcolors.whiteColor,
+       onSecondary: Appcolors.whiteColor,
+       error: Appcolors.whiteColor,
+       onError: Appcolors.whiteColor,
+       surface: Appcolors.whiteColor,
+       onSurface: Appcolors.whiteColor),
+   textTheme: TextTheme(
+       titleMedium: TextStyle(
+           fontSize: 25,
+           fontWeight: FontWeight.w400,
+           color: Appcolors.whiteColor
+       )
+   ),
+
+
+   appBarTheme: AppBarTheme(
         centerTitle: true,
 
         backgroundColor: Colors.transparent,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami2026/ui/assets_image.dart';
+import 'package:islami2026/widgets/screens/quranDetails.dart';
 
 class quranTab extends StatelessWidget {
 List<String>  surasName=["الفاتحه","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود"
@@ -20,13 +21,32 @@ List<String>  surasName=["الفاتحه","البقرة","آل عمران","ال
       children: [
         Image.asset(Assets_Image.quran_logo,height: MediaQuery.of(context).size.height*0.25),
         Expanded(
-          child: ListView.builder(
+          child: ListView.separated(
             itemCount: surasName.length,
-              itemBuilder: (context, index) => Text(surasName[index],
-              ),
+              itemBuilder: (context, index) => Center(
+                child: InkWell(
+                  onTap: () {
+                    Navigator.of(context).pushNamed(Qurandetails.routName,arguments: ModelQuran(surasName[index], index));
+                  },
+
+                  child: Text(surasName[index],style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                ),
+              ), separatorBuilder: (BuildContext context, int index) {
+              return Divider(
+                thickness:2,
+              );
+          },
         ))
 
       ],
     );
   }
+}
+class ModelQuran{
+ final String name;
+ final int index;
+
+  ModelQuran(this.name, this.index);
+
 }
