@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami2026/commen/appTheme.dart';
 import 'package:islami2026/widgets/Home.dart';
 import 'package:islami2026/widgets/SplashPage.dart';
+import 'package:islami2026/widgets/screens/hadethDetails.dart';
 import 'package:islami2026/widgets/screens/quranDetails.dart';
 
 void main() {
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         SplashPage.routName: (_) =>  SplashPage(),
         Home.routName:(_)=>Home(),
         Qurandetails.routName:(_)=>Qurandetails(),
+        HadethDetails.routName:(_)=>HadethDetails(),
       },
     );
   }
